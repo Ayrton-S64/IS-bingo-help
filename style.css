@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#controls{
+    position: fixed;
+    display: flex;
+    height: 56px;
+    background-color: rgb(99, 99, 99);
+    top: 0;
+    width: 100%;
+    box-shadow: 0px -1px 12px #6e6e6e;
+    padding: 4px;
+    gap: 8px;
+
+    button{
+        all: unset;
+        background-color: #6e6e6e;
+        padding: .4rem .75rem;
+        text-align: center;
+        border-radius: 5px;
+        color:  white;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &#check{
+            background-color: #4ca34c;
+        }
+
+        &#uncheck{
+            background-color: rgb(207, 56, 56);
+        }
+    }
+}
+
+#txtNumero{
+    flex-grow: 1;
+    padding-left: 12px;
+    font-size: 17px
+    
+}
+
+.cards{
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    gap: 25px;
+}
+
+.bingo-card--container{
+    width: 100%;
+    display: grid;
+}
+
+.bingo-card{
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgb(100, 100, 133);
+    gap: .7rem;
+    padding: 1rem;
+}
+
+.bingo-card div{
+    text-align: center;
+    display: grid;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.number-cell.checked{
+    background-color: #4ca34c;
+    color: white;
+}
+
+.bingo-card .card-id{
+    color: white;
+    background-color: rgb(231, 125, 25);
+}
